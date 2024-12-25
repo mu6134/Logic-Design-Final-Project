@@ -158,8 +158,7 @@ module finalproject(output [7:0] DATA_R, DATA_G, DATA_B,output reg [2:0]S, outpu
 						catch_r<=0;
 					end	
                 
-            // 判斷是否漏接硬幣
-            // 只在硬幣到達最底部且確實沒有被接住時才觸發遊戲結束
+            
             if(D2 == 8'b00000001)  // 綠色硬幣在底部
                 begin
                     if(((D1 & ~D2) == 8'b10000000) && (S1 != S2))
@@ -167,7 +166,7 @@ module finalproject(output [7:0] DATA_R, DATA_G, DATA_B,output reg [2:0]S, outpu
                 end
 					 else
 						begin
-							no_catch <= 0; // 接住則不觸發漏接
+							no_catch <= 0; 
 						end
             if(D3 == 8'b00000001)  // 紅色硬幣在底部
                 begin
@@ -176,7 +175,7 @@ module finalproject(output [7:0] DATA_R, DATA_G, DATA_B,output reg [2:0]S, outpu
                 end
 					 else
 						begin
-							no_catch <= 0; // 接住則不觸發漏接
+							no_catch <= 0; 
 						end
 			end
 		else if(gameover==1)//失敗畫面
@@ -363,17 +362,17 @@ endmodule
 
 /*綠色硬幣*/
 module greencoin(output reg [7:0]DATA_G, output reg [2:0]S,input CLK_div2, CLK_div3,Clear);
-	reg[24:0]random;
+	reg[37:0]random;
    reg restart;
 	
 	always @(posedge CLK_div3,posedge Clear) 
 		begin
 			if (Clear) 
 				begin
-					random <= 25'd0;
+					random <= 38'd0;
 				end	
 			else if(random > 1000000)
-				random <= 25'd0; 		
+				random <= 38'd0; 		
 			else
 		     random <= random + 1'b1;
 		end
@@ -407,17 +406,17 @@ endmodule
 
 /*紅色硬幣*/
 module redcoin(output reg [7:0]DATA_R, output reg [2:0]S,input CLK_div4, CLK_div5,Clear);
-	reg[24:0]random;
+	reg[37:0]random;
    reg restart;
 	
 	always @(posedge CLK_div5,posedge Clear) 
 		begin
 			if (Clear) 
 				begin
-					random <= 25'd0;
+					random <= 38'd0;
 				end	
 			else if(random > 1000000)
-				random <= 25'd0; 		
+				random <= 38'd0; 		
 			else
 		     random <= random + 1'b1;
 		end
