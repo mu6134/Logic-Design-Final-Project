@@ -12,8 +12,8 @@ left              Location	PIN_55
 right             Location	PIN_58
 Clear             Location	PIN_60
 S[0]              Location	PIN_124
-S[0]              Location	PIN_125
-S[0]              Location	PIN_126
+S[1]              Location	PIN_125
+S[2]              Location	PIN_126
 COMM              Location	PIN_127
 DATA_R[0]	  Location	PIN_64
 DATA_R[1]	  Location	PIN_65
