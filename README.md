@@ -8,7 +8,7 @@
 # Pin assignment
 ```
 CLK               Location	PIN_22
-left              Location  PIN_55
+left              Location	PIN_55
 right             Location	PIN_58
 Clear             Location	PIN_60
 S[0]              Location	PIN_124
