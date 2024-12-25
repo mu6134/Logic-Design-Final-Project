@@ -1,2 +1,4 @@
 # Logic-design-final-project
-閃躲遊戲
+- FPGA：Cyclone3 EP3C10E144C8
+- software : Quartus 13.1
+
